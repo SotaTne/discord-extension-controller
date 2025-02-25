@@ -10,7 +10,8 @@
     "preview": "npm run build && npm run start",
     "lint": "eslint . --ext .",
     "format": "prettier --write .",
-    "typecheck": "react-router typegen && tsc -b"
+    "typecheck": "react-router typegen && tsc -b",
+    "prepare": "husky"
   },
   "dependencies": {
     "@react-router/fs-routes": "^7.2.0",
