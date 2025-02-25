@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "streetsidesoftware.code-spell-checker",
+    "formulahendry.auto-rename-tag",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "dsznajder.es7-react-js-snippets",
+    "ecmel.vscode-html-css",
+    "ms-ceintl.vscode-language-pack-ja",
+    "xabikos.javascriptsnippets",
+    "bradlc.vscode-tailwindcss",
+    "vitest.explorer",
+    "mosapride.zenkaku"
+  ]
+}

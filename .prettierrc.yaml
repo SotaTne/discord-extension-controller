@@ -1,0 +1,10 @@
+overrides:
+  - files: "app/**/*.{ts,tsx}"
+    options:
+      parser: typescript
+  - files:
+      - ".vscode/*.json"
+      - "tsconfig.json"
+    options:
+      trailingComma: none
+      parser: jsonc
