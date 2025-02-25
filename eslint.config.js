@@ -6,7 +6,8 @@ import eslintConfigPrettier from "eslint-config-prettier";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  { files: ["**/*.{ts,tsx,js,mjs}"] },
+  { files: ["**/*.{ts,tsx}"]},
+  { ignores: ["**/node_modules/**","build/**",".react-router/**"] },
   { languageOptions: { globals: { ...globals.browser } } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
@@ -16,6 +17,18 @@ export default [
       "react/jsx-uses-react": "off",
       "react/react-in-jsx-scope": "off",
       "no-empty-pattern": "off", // 空のオブジェクトパターンを許容
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          "args": "all",
+          "argsIgnorePattern": "^_",
+          "caughtErrors": "all",
+          "caughtErrorsIgnorePattern": "^_",
+          "destructuredArrayIgnorePattern": "^_",
+          "varsIgnorePattern": "^_",
+          "ignoreRestSiblings": true
+        }
+      ],
     },
   },
   eslintConfigPrettier,
