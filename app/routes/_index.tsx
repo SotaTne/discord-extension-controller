@@ -1,5 +1,5 @@
+import { MessageComponent } from "~/components/message-component";
 import type { Route } from "./+types/_index";
-import { Welcome } from "../welcome/welcome";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -8,10 +8,23 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export function loader({ context }: Route.LoaderArgs) {
-  return { message: context.cloudflare.env.VALUE_FROM_CLOUDFLARE };
+export function loader(
+  {
+    // 今回はとりあえず引数は無し
+  }: Route.LoaderArgs,
+) {
+  return { message: "hello" };
 }
 
 export default function Home({ loaderData }: Route.ComponentProps) {
-  return <Welcome message={loaderData.message} />;
+  // /
+  // とっぷぺーじ
+  // /loginへのリンクを表示する
+  // app/routes/~ が、実際に動くページ
+  return (
+    <div>
+      <h1>Index</h1>
+      <MessageComponent message={loaderData.message} />
+    </div>
+  );
 }

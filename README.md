@@ -2,6 +2,16 @@
 
 A modern, production-ready template for building full-stack React applications using React Router.
 
+## コンポーネントの追加
+
+[https://ui.shadcn.com/docs/cli#add](https://ui.shadcn.com/docs/cli#add)
+
+ここにも書いている通り、以下のコマンドで必要なコンポーネントを追加する
+
+```bash
+npx shadcn@latest add [component]
+```
+
 ## Features
 
 - 🚀 Server-side rendering
